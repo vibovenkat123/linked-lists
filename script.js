@@ -63,6 +63,16 @@ class LinkedList {
         }
         previousNode.nextNode = null;
     }
+    contains(value) {
+        let currentNode = this.head;
+        while (currentNode) {
+            if (currentNode.value == value) {
+                return true;
+            }
+            currentNode = currentNode.nextNode;
+        }
+        return false;
+    }
     findTailValue() {
         let currentNode = this.head;
         while (currentNode.nextNode) {
