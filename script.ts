@@ -2,7 +2,10 @@ class LinkedList {
 
 }
 class nodeClass {
-  constructor(value){
-
+  value:any;
+  nextNode:any;
+  constructor(value:any){
+    this.value = value;
+    this.nextNode = null;
   }
 }
