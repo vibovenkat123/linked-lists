@@ -37,6 +37,13 @@ class LinkedList {
     this.head = new nodeClass(value, this.head);
     this.size++;
   }
+  findTailValue() {
+    let currentNode = this.head;
+    while (currentNode.nextNode) {
+      currentNode = currentNode.nextNode;
+    }
+    return currentNode.value;
+  }
   printValues() {
     let currentNode = this.head;
     while (currentNode) {
