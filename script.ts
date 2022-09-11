@@ -27,6 +27,9 @@ class LinkedList {
     }
     this.size++;
   }
+  findSize() {
+    return this.size;
+  }
   prepend(value: any) {
     this.head = new nodeClass(value, this.head);
     this.size++;
