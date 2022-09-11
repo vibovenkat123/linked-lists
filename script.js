@@ -15,6 +15,7 @@ class LinkedList {
     }
     prepend(value) {
         this.head = new nodeClass(value, this.head);
+        this.size++;
     }
     printValues() {
         let currentNode = this.head;
