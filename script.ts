@@ -60,6 +60,7 @@ class LinkedList {
       currentNode = currentNode.nextNode;
     }
     previousNode.nextNode = null;
+    this.size--;
   }
   contains(value: any) {
     let currentNode: any = this.head;
