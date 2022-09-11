@@ -94,6 +94,31 @@ class LinkedList {
     }
     return currentNode.value;
   }
+  insertAt(value: any, index: number) {
+    if (index > this.size) {
+      return "Enter a value within the range of the size of the list";
+    }
+    if (index === 0) {
+      this.prepend(value);
+      return;
+    }
+    if (index === this.size) {
+      this.append(value);
+      return;
+    }
+    const valueNode = new nodeClass(value);
+    let previousNode: any;
+    let currentNode: any = this.head;
+    let currentIndex: number = 0;
+    while (currentIndex < index) {
+      previousNode = currentNode;
+      currentNode = currentNode.nextNode;
+      currentIndex++;
+    }
+    valueNode.nextNode = currentNode;
+    previousNode.nextNode = valueNode;
+    this.size++;
+  }
   printValues() {
     let currentNode = this.head;
     while (currentNode) {
