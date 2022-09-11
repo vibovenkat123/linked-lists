@@ -71,6 +71,21 @@ class LinkedList {
     }
     return false;
   }
+  find(value: any) {
+    if (this.contains(value)) {
+      let currentNode = this.head;
+      let index = 0;
+      while (currentNode) {
+        if (currentNode.value == value) {
+          return index;
+        }
+        currentNode = currentNode.nextNode;
+        index++;
+      }
+    } else {
+      return null;
+    }
+  }
   findTailValue() {
     let currentNode = this.head;
     while (currentNode.nextNode) {
