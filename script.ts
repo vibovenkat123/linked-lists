@@ -16,4 +16,11 @@ class LinkedList {
   prepend(value:any){
     this.head = new nodeClass(value, this.head)
   }
+  printValues(){
+    let currentNode = this.head
+    while (currentNode){
+      console.log(currentNode.value)
+      currentNode = currentNode.nextNode;
+    }
+  }
 }
