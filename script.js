@@ -13,6 +13,9 @@ class LinkedList {
         this.head = null;
         this.size = 0;
     }
+    findHeadValue() {
+        return this.head.value;
+    }
     append(value) {
         let node = new nodeClass(value);
         let currentNode;
