@@ -13,6 +13,21 @@ class LinkedList {
         this.head = null;
         this.size = 0;
     }
+    append(value) {
+        let node = new nodeClass(value);
+        let currentNode;
+        if (this.head == null) {
+            this.head = node;
+        }
+        else {
+            currentNode = this.head;
+            while (currentNode.nextNode) {
+                currentNode = currentNode.nextNode;
+            }
+            currentNode.nextNode = node;
+        }
+        this.size++;
+    }
     prepend(value) {
         this.head = new nodeClass(value, this.head);
         this.size++;
