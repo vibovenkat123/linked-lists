@@ -1,10 +1,11 @@
-var LinkedList = /** @class */ (function () {
-    function LinkedList() {
+class LinkedList {
+    head = null;
+}
+class nodeClass {
+    value;
+    nextNode;
+    constructor(value) {
+        this.value = value;
+        this.nextNode = null;
     }
-    return LinkedList;
-}());
-var nodeClass = /** @class */ (function () {
-    function nodeClass(value) {
-    }
-    return nodeClass;
-}());
+}
