@@ -1,5 +1,6 @@
 class LinkedList {
-
+  head: any = null;
+  
 }
 class nodeClass {
   value:any;
