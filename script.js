@@ -1,20 +1,19 @@
 class nodeClass {
     value;
     nextNode;
-    constructor(value) {
+    constructor(value, nextNode = null) {
         this.value = value;
-        this.nextNode = null;
+        this.nextNode = nextNode;
     }
 }
 class LinkedList {
-    head = null;
-    constructor(headNode) {
-        this.head = headNode;
-        this.head.nextNode = null;
+    head;
+    size;
+    constructor() {
+        this.head = null;
+        this.size = 0;
     }
-    append(value) {
-        let newNode = new nodeClass(value);
-        let test = this.head;
-        this.head.nextNode = newNode;
+    prepend(value) {
+        this.head = new nodeClass(value, this.head);
     }
 }
