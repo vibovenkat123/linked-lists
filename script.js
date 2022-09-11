@@ -54,6 +54,15 @@ class LinkedList {
             }
         }
     }
+    pop() {
+        let currentNode = this.head;
+        let previousNode;
+        while (currentNode.nextNode) {
+            previousNode = currentNode;
+            currentNode = currentNode.nextNode;
+        }
+        previousNode.nextNode = null;
+    }
     findTailValue() {
         let currentNode = this.head;
         while (currentNode.nextNode) {
