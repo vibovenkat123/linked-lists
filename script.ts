@@ -62,6 +62,27 @@ class LinkedList {
     previousNode.nextNode = null;
     this.size--;
   }
+  removeAt(index: number) {
+    if (index > this.size) {
+      return "Enter a valid index";
+    }
+    let currentNode: any = this.head;
+    let previousNode: any;
+    let currentIndex = 0;
+    if (index === 0) {
+      this.head = currentNode.nextNode;
+      return;
+    } else if (index === this.size) {
+      this.pop();
+    } else {
+      while (currentIndex < index) {
+        currentIndex++;
+        previousNode = currentNode;
+        currentNode = currentNode.nextNode;
+      }
+      previousNode.nextNode = currentNode.nextNode;
+    }
+  }
   contains(value: any) {
     let currentNode: any = this.head;
     while (currentNode) {
